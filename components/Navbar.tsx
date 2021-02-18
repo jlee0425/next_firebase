@@ -25,8 +25,8 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href={'/${username}'}>
-								<img src={user?.photoUrl} />
+							<Link href={`/${username}`}>
+								<img src={user?.photoURL} />
 							</Link>
 						</li>
 					</>
