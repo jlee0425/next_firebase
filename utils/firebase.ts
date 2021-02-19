@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 import 'firebase/storage';
+import { Post } from '../components/PostFeed';
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyDRbWrzeOcWs5WLKKlf6iHuZK7pRHUC_dw',
@@ -23,3 +24,22 @@ export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
+
+export const getUserWithUsername = async (username: string) => {
+	const userRef = firestore.collection('users');
+	const query = userRef.where('username', '==', username).limit(1);
+	const userDoc = (await query.get()).docs[0];
+
+	return userDoc;
+};
+
+export const postToJSON = (doc) => {
+	const data: Post = doc.data();
+	return {
+		...data,
+		createdAt: data.createdAt.toMillis(),
+		updatedAt: data.createdAt.toMillis(),
+	};
+};
+
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
