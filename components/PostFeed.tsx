@@ -49,7 +49,7 @@ const PostItem = ({ post, admin = false }: { post: Post; admin: boolean }) => {
 				<span>
 					{wordCount} words. {minutesToRead} min read
 				</span>
-				<span>{post.heartCount} 💝</span>
+				<span>{post.heartCount} 💓 </span>
 			</footer>
 		</div>
 	);
