@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import Metatags from '../../components/Metatags';
 import PostFeed, { Post } from '../../components/PostFeed';
 import UserProfile, { UserProps } from '../../components/UserProfile';
 import { getUserWithUsername, postToJSON } from '../../utils/firebase';
@@ -35,6 +36,7 @@ export const getServerSideProps = async ({ query }) => {
 const UserPage = ({ user, posts }: { user: UserProps; posts: Post[] }) => {
 	return (
 		<main>
+			<Metatags title={`${user}'s page`} />
 			<UserProfile {...user} />
 			<PostFeed posts={posts} admin={true} />
 		</main>
