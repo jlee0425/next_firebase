@@ -21,6 +21,10 @@ export const getServerSideProps = async ({ query }) => {
 			.limit(5);
 
 		posts = (await postsQuery.get()).docs.map(postToJSON);
+	} else {
+		return {
+			notFound: true,
+		};
 	}
 
 	return {
