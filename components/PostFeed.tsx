@@ -47,9 +47,9 @@ const PostItem = ({ post, admin = false }: { post: Post; admin: boolean }) => {
 			</Link>
 			<footer>
 				<span>
-					{wordCount} words. {minutesToRead} min read
+					{wordCount} words. {minutesToRead} min read.
 				</span>
-				<span>{post.heartCount} 💓 </span>
+				<span className='text-success'> {post.heartCount} 💓 </span>
 			</footer>
 		</div>
 	);

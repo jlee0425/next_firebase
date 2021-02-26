@@ -12,7 +12,6 @@ export const getServerSideProps = async ({ query }) => {
 
 	let user = null;
 	let posts = null;
-
 	if (userDoc) {
 		user = userDoc.data();
 		const postsQuery = userDoc.ref
@@ -38,7 +37,7 @@ const UserPage = ({ user, posts }: { user: UserProps; posts: Post[] }) => {
 		<main>
 			<Metatags title={`${user}'s page`} />
 			<UserProfile {...user} />
-			<PostFeed posts={posts} admin={true} />
+			<PostFeed posts={posts} admin />
 		</main>
 	);
 };
