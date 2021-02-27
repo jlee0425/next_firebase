@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import ReactMarkdown from 'react-markdown';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
+import ImageUploader from '../../components/ImageUploader';
 
 interface FormProps {
 	content: string;
@@ -46,6 +47,7 @@ const PostManager = () => {
 							defaultValues={post}
 							preview={preview}
 						/>
+						<ImageUploader />
 					</section>
 					<aside>
 						<h3>Tools</h3>
