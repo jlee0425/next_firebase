@@ -99,6 +99,14 @@
     "@firebase/util" "0.3.4"
     tslib "^1.11.1"
 
+"@firebase/component@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.2.0.tgz#9d48327b3377b84ef22266ec6ab13416ea174c0a"
+  integrity sha512-QJJxMEzLRMWjujPBrrS32BScg1wmdY/dZWR8nAEzyC8WKQsNevYR9ZKLbBYxaN0umH9yf5C40kwmy+gI8jStPw==
+  dependencies:
+    "@firebase/util" "0.3.4"
+    tslib "^1.11.1"
+
 "@firebase/database-types@0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.7.0.tgz#ab140d178ded676e60d8ade8c8f13de8e01e7e1e"
@@ -247,6 +255,16 @@
   integrity sha512-87CrvKrf8kijVekRBmUs8htsNz7N5X/pDhv3BvJBqw8K65GsUolpyjx0f4QJRkCRUYmh3MSkpa5P08lpVbC6nQ==
   dependencies:
     "@firebase/component" "0.1.21"
+    "@firebase/storage-types" "0.3.13"
+    "@firebase/util" "0.3.4"
+    tslib "^1.11.1"
+
+"@firebase/storage@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@firebase/storage/-/storage-0.4.3.tgz#8800fa61131890f64448b4ab536c8ee1ba9bdcdf"
+  integrity sha512-53IIt6Z3BltPBPmvxF/RGlvW8nBl4wI9GMR52CjRAIj438tPNxbpIvkLB956VVB9gfZhDcPIKxg7hNtC7hXrkA==
+  dependencies:
+    "@firebase/component" "0.2.0"
     "@firebase/storage-types" "0.3.13"
     "@firebase/util" "0.3.4"
     tslib "^1.11.1"
